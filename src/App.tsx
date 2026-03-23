@@ -119,7 +119,6 @@ export function App() {
       <div className="mx-auto flex min-h-svh max-w-2xl flex-col gap-8 p-8">
         <h1 className="text-xl font-semibold">ROUI Components</h1>
 
-        {/* Button */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Button</h2>
           <div className="flex flex-wrap items-center gap-2">
@@ -140,7 +139,6 @@ export function App() {
 
         <Separator />
 
-        {/* Badge */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Badge</h2>
           <div className="flex flex-wrap items-center gap-2">
@@ -153,7 +151,6 @@ export function App() {
 
         <Separator />
 
-        {/* Avatar */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Avatar</h2>
           <div className="flex items-center gap-3">
@@ -174,7 +171,6 @@ export function App() {
 
         <Separator />
 
-        {/* Input, Textarea, Select */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Input, Textarea & Select
@@ -208,7 +204,6 @@ export function App() {
 
         <Separator />
 
-        {/* Checkbox, Switch, Radio */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Checkbox, Switch & Radio
@@ -241,7 +236,6 @@ export function App() {
 
         <Separator />
 
-        {/* Toggle & ToggleGroup */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Toggle & Toggle Group
@@ -270,7 +264,6 @@ export function App() {
 
         <Separator />
 
-        {/* Slider & Progress */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Slider & Progress
@@ -317,7 +310,6 @@ export function App() {
 
         <Separator />
 
-        {/* Card */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Card</h2>
           <Card>
@@ -342,7 +334,6 @@ export function App() {
 
         <Separator />
 
-        {/* Tabs */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Tabs</h2>
           <Tabs defaultValue="account">
@@ -371,7 +362,6 @@ export function App() {
 
         <Separator />
 
-        {/* Accordion */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Accordion
@@ -402,7 +392,6 @@ export function App() {
 
         <Separator />
 
-        {/* Collapsible */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Collapsible
@@ -424,7 +413,6 @@ export function App() {
 
         <Separator />
 
-        {/* Alert */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Alert</h2>
           <Alert>
@@ -445,7 +433,6 @@ export function App() {
 
         <Separator />
 
-        {/* Table */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">Table</h2>
           <Table>
@@ -484,7 +471,6 @@ export function App() {
 
         <Separator />
 
-        {/* Skeleton */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Skeleton
@@ -500,7 +486,6 @@ export function App() {
 
         <Separator />
 
-        {/* Tooltip & Kbd */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Tooltip & Kbd
@@ -523,7 +508,6 @@ export function App() {
 
         <Separator />
 
-        {/* Dialog, AlertDialog, Dropdown, Popover */}
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-medium text-muted-foreground">
             Dialog, AlertDialog, Dropdown & Popover
@@ -619,5 +603,3 @@ export function App() {
     </TooltipProvider>
   )
 }
-
-export default App

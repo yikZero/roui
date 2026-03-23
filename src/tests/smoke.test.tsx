@@ -1,26 +1,12 @@
 import { render } from "@testing-library/react"
-import { describe, it, expect, beforeAll } from "vitest"
+import { describe, it, expect } from "vitest"
 
-// Polyfill ResizeObserver for jsdom (required by input-otp)
-beforeAll(() => {
-  if (typeof globalThis.ResizeObserver === "undefined") {
-    globalThis.ResizeObserver = class {
-      observe() {}
-      unobserve() {}
-      disconnect() {}
-    } as unknown as typeof ResizeObserver
-  }
-})
-
-// Accordion
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion"
-
-// Alert Dialog
 import {
   AlertDialog,
   AlertDialogTrigger,
@@ -33,19 +19,13 @@ import {
   AlertDialogCancel,
   AlertDialogMedia,
 } from "@/components/ui/alert-dialog"
-
-// Alert
 import {
   Alert,
   AlertTitle,
   AlertDescription,
   AlertAction,
 } from "@/components/ui/alert"
-
-// AspectRatio
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-
-// Avatar
 import {
   Avatar,
   AvatarImage,
@@ -54,11 +34,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
 } from "@/components/ui/avatar"
-
-// Badge
 import { Badge } from "@/components/ui/badge"
-
-// Breadcrumb
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -68,18 +44,12 @@ import {
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
 } from "@/components/ui/breadcrumb"
-
-// Button Group
 import {
   ButtonGroup,
   ButtonGroupSeparator,
   ButtonGroupText,
 } from "@/components/ui/button-group"
-
-// Button
 import { Button } from "@/components/ui/button"
-
-// Card
 import {
   Card,
   CardHeader,
@@ -89,21 +59,13 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card"
-
-// Checkbox
 import { Checkbox } from "@/components/ui/checkbox"
-
-// Collapsible
 import {
   Collapsible,
   CollapsibleTrigger,
   CollapsibleContent,
 } from "@/components/ui/collapsible"
-
-// Context Menu
 import { ContextMenu, ContextMenuTrigger } from "@/components/ui/context-menu"
-
-// Dialog
 import {
   Dialog,
   DialogTrigger,
@@ -113,8 +75,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog"
-
-// Drawer
 import {
   Drawer,
   DrawerTrigger,
@@ -124,14 +84,10 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from "@/components/ui/drawer"
-
-// Dropdown Menu
 import {
   DropdownMenu,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
-// Empty
 import {
   Empty,
   EmptyHeader,
@@ -140,8 +96,6 @@ import {
   EmptyContent,
   EmptyMedia,
 } from "@/components/ui/empty"
-
-// Field
 import {
   Field,
   FieldLabel,
@@ -154,11 +108,7 @@ import {
   FieldContent,
   FieldTitle,
 } from "@/components/ui/field"
-
-// Hover Card
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card"
-
-// Input Group
 import {
   InputGroup,
   InputGroupAddon,
@@ -167,19 +117,13 @@ import {
   InputGroupInput,
   InputGroupTextarea,
 } from "@/components/ui/input-group"
-
-// Input OTP
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
   InputOTPSeparator,
 } from "@/components/ui/input-otp"
-
-// Input
 import { Input } from "@/components/ui/input"
-
-// Item
 import {
   Item,
   ItemMedia,
@@ -192,32 +136,20 @@ import {
   ItemHeader,
   ItemFooter,
 } from "@/components/ui/item"
-
-// Kbd
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
-
-// Label
 import { Label } from "@/components/ui/label"
-
-// Menubar
 import { Menubar, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar"
-
-// Native Select
 import {
   NativeSelect,
   NativeSelectOption,
   NativeSelectOptGroup,
 } from "@/components/ui/native-select"
-
-// Navigation Menu
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
-
-// Pagination
 import {
   Pagination,
   PaginationContent,
@@ -227,22 +159,10 @@ import {
   PaginationPrevious,
   PaginationEllipsis,
 } from "@/components/ui/pagination"
-
-// Popover
 import { Popover, PopoverTrigger } from "@/components/ui/popover"
-
-// Progress
 import { Progress } from "@/components/ui/progress"
-
-// Radio Group
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-
-// Resizable: skipped — react-resizable-panels requires browser APIs not available in jsdom
-
-// Scroll Area
 import { ScrollArea } from "@/components/ui/scroll-area"
-
-// Select
 import {
   Select,
   SelectTrigger,
@@ -253,11 +173,7 @@ import {
   SelectLabel,
   SelectSeparator,
 } from "@/components/ui/select"
-
-// Separator
 import { Separator } from "@/components/ui/separator"
-
-// Sheet
 import {
   Sheet,
   SheetTrigger,
@@ -267,20 +183,10 @@ import {
   SheetTitle,
   SheetDescription,
 } from "@/components/ui/sheet"
-
-// Skeleton
 import { Skeleton } from "@/components/ui/skeleton"
-
-// Slider
 import { Slider } from "@/components/ui/slider"
-
-// Spinner
 import { Spinner } from "@/components/ui/spinner"
-
-// Switch
 import { Switch } from "@/components/ui/switch"
-
-// Table
 import {
   Table,
   TableHeader,
@@ -291,20 +197,10 @@ import {
   TableCell,
   TableCaption,
 } from "@/components/ui/table"
-
-// Tabs
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-
-// Textarea
 import { Textarea } from "@/components/ui/textarea"
-
-// Toggle Group
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
-
-// Toggle
 import { Toggle } from "@/components/ui/toggle"
-
-// Tooltip
 import {
   Tooltip,
   TooltipTrigger,
@@ -807,8 +703,6 @@ describe("RadioGroup", () => {
     expect(container).toBeInTheDocument()
   })
 })
-
-// Resizable: skipped — react-resizable-panels uses browser APIs not available in jsdom
 
 describe("ScrollArea", () => {
   it("renders without crashing", () => {

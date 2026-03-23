@@ -1,9 +1,12 @@
 import { test, expect } from "@playwright/test"
 
 test.describe("Visual regression", () => {
-  test("full page screenshot", async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto("/")
     await page.waitForLoadState("networkidle")
+  })
+
+  test("full page screenshot", async ({ page }) => {
     await expect(page).toHaveScreenshot("full-page.png", {
       fullPage: true,
       maxDiffPixelRatio: 0.01,
@@ -11,7 +14,6 @@ test.describe("Visual regression", () => {
   })
 
   test("button variants", async ({ page }) => {
-    await page.goto("/")
     const section = page
       .locator("section")
       .filter({ hasText: "Button" })
@@ -20,7 +22,6 @@ test.describe("Visual regression", () => {
   })
 
   test("form controls", async ({ page }) => {
-    await page.goto("/")
     const section = page
       .locator("section")
       .filter({ hasText: "Input, Textarea & Select" })
@@ -28,7 +29,6 @@ test.describe("Visual regression", () => {
   })
 
   test("checkbox switch radio", async ({ page }) => {
-    await page.goto("/")
     const section = page
       .locator("section")
       .filter({ hasText: "Checkbox, Switch & Radio" })
@@ -36,25 +36,21 @@ test.describe("Visual regression", () => {
   })
 
   test("card", async ({ page }) => {
-    await page.goto("/")
     const section = page.locator("section").filter({ hasText: "Card" }).first()
     await expect(section).toHaveScreenshot("card.png")
   })
 
   test("tabs", async ({ page }) => {
-    await page.goto("/")
     const section = page.locator("section").filter({ hasText: "Tabs" }).first()
     await expect(section).toHaveScreenshot("tabs.png")
   })
 
   test("table", async ({ page }) => {
-    await page.goto("/")
     const section = page.locator("section").filter({ hasText: "Table" }).first()
     await expect(section).toHaveScreenshot("table.png")
   })
 
   test("alert", async ({ page }) => {
-    await page.goto("/")
     const section = page.locator("section").filter({ hasText: "Alert" }).first()
     await expect(section).toHaveScreenshot("alert.png")
   })
