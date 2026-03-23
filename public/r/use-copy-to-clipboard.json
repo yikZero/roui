@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-copy-to-clipboard",
+  "title": "useCopyToClipboard",
+  "description": "A hook for copying text to clipboard.",
+  "files": [
+    {
+      "path": "registry/new-york/hooks/use-copy-to-clipboard.ts",
+      "content": "import { useCallback, useState } from \"react\"\n\nexport function useCopyToClipboard() {\n  const [copiedText, setCopiedText] = useState<string | null>(null)\n\n  const copy = useCallback(async (text: string) => {\n    try {\n      await navigator.clipboard.writeText(text)\n      setCopiedText(text)\n      return true\n    } catch {\n      setCopiedText(null)\n      return false\n    }\n  }, [])\n\n  return { copiedText, copy }\n}\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

@@ -34,6 +34,49 @@ Always use `bun` as the package manager (not npm/pnpm).
 - Use path alias `@/` (maps to `./src/`)
 - Icon library: lucide-react
 
+## Testing
+
+- **Smoke tests:** `bun run test` (52 tests, vitest + jsdom)
+- **Visual regression:** `bun run test:visual` (8 playwright screenshot comparisons)
+- **Update baselines:** `bun run test:visual:update`
+
+## Consuming ROUI in Other Projects
+
+### 1. Configure registry in `components.json`
+
+```json
+{
+  "registries": {
+    "@roui": "https://ui.yikzero.com/r"
+  }
+}
+```
+
+### 2. Install theme + components
+
+```bash
+npx shadcn add @roui/theme
+npx shadcn add @roui/button @roui/card @roui/dialog
+npx shadcn add @roui/use-debounce
+```
+
+### 3. MCP Server (AI-assisted development)
+
+Add to your IDE's MCP config (Cursor, Claude Code, etc.):
+
+```json
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    }
+  }
+}
+```
+
+The MCP server reads `components.json` registries automatically. AI can then discover and install ROUI components by name.
+
 ## Git
 
 - Conventional Commits: `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`, etc.

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-mobile",
+  "title": "useIsMobile",
+  "description": "A hook for detecting mobile viewport.",
+  "registryDependencies": [
+    "use-media-query"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/hooks/use-mobile.ts",
+      "content": "import { useMediaQuery } from \"@/hooks/use-media-query\"\n\nconst MOBILE_BREAKPOINT = 768\n\nexport function useIsMobile() {\n  return useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)\n}\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}

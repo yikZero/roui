@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-mounted",
+  "title": "useMounted",
+  "description": "A hook for SSR-safe mounted state detection.",
+  "files": [
+    {
+      "path": "registry/new-york/hooks/use-mounted.ts",
+      "content": "import { useEffect, useState } from \"react\"\n\nexport function useMounted() {\n  const [mounted, setMounted] = useState(false)\n\n  useEffect(() => {\n    setMounted(true)\n  }, [])\n\n  return mounted\n}\n",
+      "type": "registry:hook"
+    }
+  ],
+  "type": "registry:hook"
+}
